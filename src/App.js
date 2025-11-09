@@ -1,21 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, ResponsiveContainer } from 'recharts';
-import { TrendingUp, Shield, Zap, Maximize2, Monitor, ChevronDown, ChevronUp, X, Menu, Search, Bell, Wallet, BarChart3, Users, Settings, LogOut } from 'lucide-react';
+import { TrendingUp, Shield, Zap, Maximize2, Monitor, ChevronDown, ChevronUp, X, Menu, Bell, Wallet, BarChart3, Settings } from 'lucide-react';
 import './zentro-track.css';
 
 const ZentroTrack = () => {
   const [activeTab, setActiveTab] = useState('30d');
   const [openFaq, setOpenFaq] = useState(null);
-  const [dashboardView, setDashboardView] = useState('wallet');
   const [leaderboardFilter, setLeaderboardFilter] = useState('all');
   const [showWalletModal, setShowWalletModal] = useState(false);
   const [walletAddress, setWalletAddress] = useState('');
-  const [isVisible, setIsVisible] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   // Sample data for portfolio chart
   const portfolioData = [
